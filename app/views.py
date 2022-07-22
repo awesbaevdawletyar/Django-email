@@ -11,8 +11,8 @@ def home(request):
         mail = request.POST['email']
         subject = request.POST['subject']
         message='Informaciya jibergen paydalaniwshi: '+name+'\n'+'Informaciya: '+subject+'\n'+'Email addressi: '+mail
-        send_mail(name,message,mail,['auesbaevdauletyar@gmail.com'],
+        send_mail(name,message,mail,['awesbaevdawletyar@gmail.com'],
                   fail_silently=False)
         luck='Informaciya jiberildi!!!'
-        return render(request, 'index.html',{'luck':luck})
-    return render(request, 'index.html')
+        return render(request, 'mail.html',{'luck':luck})
+    return render(request, 'mail.html')
